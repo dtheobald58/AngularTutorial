@@ -1,5 +1,6 @@
 "use strict";
 exports.HEROES = [
+    { id: 0, name: 'Zero' },
     { id: 11, name: 'Mr. Nice' },
     { id: 12, name: 'Narco' },
     { id: 13, name: 'Bombasto' },
