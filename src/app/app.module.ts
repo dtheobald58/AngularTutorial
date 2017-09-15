@@ -1,3 +1,7 @@
+//root Angular module
+
+//these Javascript import statements are used to access public objects (marked with "export" keyword)
+//from other Javascript files/modules 
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
@@ -16,6 +20,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
+  //other Angular modules needed for the templates of components declared in this Ang. module
   imports: [
     BrowserModule,
     FormsModule,
@@ -23,6 +28,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
+  //view classes (specifically components)
   declarations: [
     AppComponent,
     DashboardComponent,
@@ -30,7 +36,10 @@ import { InMemoryDataService }  from './in-memory-data.service';
     HeroesComponent,
     HeroSearchComponent
   ],
+  //global service(s), available to all parts of app
   providers: [ HeroService ],
+  //main app view (aka root component), only the root module (this Ang. module)
+  //should have this bootstrap property
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
