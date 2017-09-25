@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+//decorator, identifies class "AppComponent" as a component
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
@@ -14,8 +15,12 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     core_1.Component({
+        //CSS selector, inserts an instance of this component where there is a matching tag in parent HTML
+        //in this example the tag would be <my-app>
         selector: 'my-app',
+        //template is this component's HTML template, can also be linked to by using "templateUrl"
         template: "\n        <h1>{{title}}</h1>\n        <nav>\n            <a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n            <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n        </nav>\n        <router-outlet></router-outlet>\n    ",
+        //styleUrls is a link to the above template's stylesheet, can also use "styles" to do CSS inline
         styleUrls: ['./app.component.css'],
     })
 ], AppComponent);

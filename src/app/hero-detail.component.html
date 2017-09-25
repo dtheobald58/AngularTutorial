@@ -1,11 +1,11 @@
 <div *ngIf="hero">
-  <h2>{{hero.name}} details!</h2>
+  <h2>{{hero.name}} details!</h2> <!--displays hero.name property value-->
   <div>
-    <label>id: </label>{{hero.id}}
+    <label>id: </label>{{hero.id}} <!--displays hero.id property value-->
   </div>
   <div>
     <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name"/>
+    <input [(ngModel)]="hero.name" placeholder="name"/> <!--allows user input to edit name-->
   </div>
   <button (click)="goBack()">Back</button>
 </div>
